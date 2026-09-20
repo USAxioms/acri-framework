@@ -1,0 +1,22 @@
+# Adaptive Conversational Risk Intake (ACRI)
+# Python Dependencies for Code Ocean Deployment
+# 
+# Core ACRI uses only Python standard library:
+# - dataclasses (3.7+)
+# - json
+# - hashlib
+# - datetime
+# - pathlib
+# - argparse
+# - enum
+#
+# Optional dependencies for testing and analysis:
+
+pytest>=7.0.0
+pytest-cov>=3.0.0
+numpy>=1.21.0
+pandas>=1.3.0
+
+# Documentation (optional)
+sphinx>=4.0.0
+sphinx-rtd-theme>=1.0.0

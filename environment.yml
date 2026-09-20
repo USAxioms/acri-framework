@@ -1,0 +1,12 @@
+name: acri-env
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - pytest>=7.0.0
+    - pytest-cov>=3.0.0
+    - numpy>=1.21.0
+    - pandas>=1.3.0
+description: Adaptive Conversational Risk Intake (ACRI) Environment

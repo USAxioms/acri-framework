@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "language": "python3",
+  "title": "Adaptive Conversational Risk Intake (ACRI) - Life Insurance Underwriting Framework",
+  "description": "A formal, reproducible system for adaptive evidence triage in life insurance underwriting with complete decision provenance and cryptographic audit trail.",
+  "authors": [
+    {
+      "name": "Michael Aaron Russell",
+      "affiliation": "Universal Standard Axiom Corporation"
+    }
+  ],
+  "keywords": [
+    "insurance",
+    "underwriting",
+    "adaptive systems",
+    "conversational AI",
+    "evidence triage",
+    "decision provenance",
+    "reproducible research",
+    "governance",
+    "compliance"
+  ],
+  "license": "Proprietary",
+  "year": 2026,
+  "date_created": "2026-09-19",
+  "environment": {
+    "python": "3.8+",
+    "os": "linux"
+  },
+  "execution": {
+    "entrypoint": "run.sh",
+    "allow_network_access": false,
+    "allow_docker": false,
+    "timeout_seconds": 600
+  },
+  "setup_instructions": [
+    "Ensure Python 3.8+ is installed",
+    "Install dependencies: pip install -r requirements.txt",
+    "Review configuration in config/default_config.json",
+    "Sample data is provided in data/sample_application.json"
+  ],
+  "run_instructions": [
+    "Basic: ./run.sh",
+    "Custom: python3 code/acri_runner.py --config config/default_config.json --application APP_ID --data data.json",
+    "Results saved to /results/"
+  ],
+  "inputs": {
+    "configuration": "config/default_config.json",
+    "sample_data": "data/sample_application.json",
+    "custom_data_format": "JSON with applicant information"
+  },
+  "outputs": {
+    "evidence_state": "*_evidence_state.json - Complete evidence state vector",
+    "decision_provenance": "*_decision_provenance.json - Audit trail with cryptographic hash",
+    "results": "*_results.json - Final disposition and metrics"
+  },
+  "research_hypotheses": [
+    {
+      "id": "H1",
+      "name": "Evidence Efficiency",
+      "description": "ACRI reduces unnecessary evidence without degrading risk selection",
+      "measure": "Evidence requests per application (≥15% reduction, p<0.05)"
+    },
+    {
+      "id": "H2",
+      "name": "STP Expansion",
+      "description": "ACRI increases STP rate compared to traditional pathway",
+      "measure": "STP rate (≥10 percentage point increase)"
+    },
+    {
+      "id": "H3",
+      "name": "Targeted Evidence",
+      "description": "Dynamic evidence selection reduces unnecessary lab orders",
+      "measure": "Non-targeted evidence (≥20% reduction)"
+    },
+    {
+      "id": "H4",
+      "name": "Underwriter Capacity",
+      "description": "STP expansion frees underwriter capacity for complex cases",
+      "measure": "Complex cases per underwriter (≥15% increase)"
+    },
+    {
+      "id": "H5",
+      "name": "Risk Preservation",
+      "description": "ACRI expands automation without degrading mortality selection",
+      "measure": "Expected vs. actual mortality ratio (<105% of expected)"
+    }
+  ],
+  "reproducibility": {
+    "level": "complete",
+    "formal_specifications": true,
+    "pseudocode": true,
+    "configuration_space": true,
+    "test_protocols": true,
+    "deployment_stages": true,
+    "decision_provenance": true,
+    "monitoring_framework": true
+  },
+  "governance_compliance": [
+    "NAIC AI Model Bulletin",
+    "Fair Lending",
+    "Privacy (CCPA, GDPR)",
+    "Underwriting Governance",
+    "Decision Auditability"
+  ],
+  "documentation": {
+    "readme": "README.md",
+    "specifications": "Reproducibility Capsule (external)",
+    "white_paper": "Russell ACRI Framework Paper (external)"
+  },
+  "references": {
+    "framework_paper": "Russell, M.A. (2026). Adaptive Conversational Risk Intake and Dynamic Evidence Triage in Life Insurance Underwriting. Universal Standard Axiom Corporation, Working Paper.",
+    "reproducibility_capsule": "ACRI Reproducibility Capsule - Complete Formal Specifications, Reference Implementation, Test Framework, Deployment Protocol.",
+    "white_paper_smart_store_csl": "Russell, M.A. (2026). The Smart Store Cognitive State Ledger - Blockchain-Based Machine-Computable Legal Compliance."
+  },
+  "tags": {
+    "domain": "insurance",
+    "methodology": "formal_systems",
+    "research_type": "frameworks_and_tools",
+    "code_availability": "open",
+    "data_availability": "sample_provided"
+  }
+}
