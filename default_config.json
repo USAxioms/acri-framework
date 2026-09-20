@@ -1,0 +1,135 @@
+{
+  "system": {
+    "name": "Adaptive Conversational Risk Intake (ACRI)",
+    "version": "1.0.0",
+    "author": "Michael Aaron Russell, Universal Standard Axiom Corporation",
+    "environment": "production"
+  },
+  
+  "underwriting": {
+    "uncertainty_threshold": 0.15,
+    "value_threshold": 0.20,
+    "lambda_cost": 0.5,
+    "max_conversation_time": 15.0,
+    "max_turns": 20,
+    "min_age": 18,
+    "max_age": 85,
+    "min_amount": 50000,
+    "max_amount": 1000000
+  },
+  
+  "evidence_requirements": {
+    "health": {
+      "required": true,
+      "priority": 1,
+      "acceptable_sources": ["conversational_intake", "medical_records", "lab_work"]
+    },
+    "lifestyle": {
+      "required": true,
+      "priority": 2,
+      "acceptable_sources": ["conversational_intake"]
+    },
+    "family_history": {
+      "required": false,
+      "priority": 3,
+      "acceptable_sources": ["conversational_intake"]
+    },
+    "occupation": {
+      "required": false,
+      "priority": 4,
+      "acceptable_sources": ["conversational_intake"]
+    }
+  },
+  
+  "dispositions": {
+    "stp": {
+      "name": "Straight-Through Processing",
+      "description": "Case meets all STP requirements, no manual review needed",
+      "requires_underwriter": false
+    },
+    "evidence_request": {
+      "name": "Targeted Evidence Request",
+      "description": "Material uncertainty remains, request specific evidence",
+      "requires_underwriter": false
+    },
+    "refer": {
+      "name": "Refer to Underwriter",
+      "description": "Material complexity or uncertainty, requires professional judgment",
+      "requires_underwriter": true
+    },
+    "postpone": {
+      "name": "Postpone",
+      "description": "Insufficient information, can reapply later",
+      "requires_underwriter": true
+    },
+    "decline": {
+      "name": "Decline",
+      "description": "Case does not meet underwriting requirements",
+      "requires_underwriter": true
+    }
+  },
+  
+  "governance": {
+    "compliance_frameworks": ["NAIC_AI_Model_Bulletin", "Fair_Lending", "Privacy"],
+    "requires_approval": ["rules_version", "guideline_version"],
+    "audit_logging": true,
+    "decision_provenance": true
+  },
+  
+  "monitoring": {
+    "enabled": true,
+    "metrics": [
+      "stp_rate",
+      "referral_rate",
+      "average_cycle_time",
+      "expected_vs_actual_mortality",
+      "rule_execution_errors",
+      "data_quality_issues",
+      "applicant_abandonment"
+    ],
+    "alert_thresholds": {
+      "stp_rate_change": 0.05,
+      "referral_rate_change": 0.03,
+      "cycle_time_increase": 0.20,
+      "mortality_deviation": 0.10,
+      "error_rate": 0.05
+    }
+  },
+  
+  "deployment": {
+    "phase": "phase_2_pilot",
+    "restrictions": {
+      "max_face_amount": 500000,
+      "min_age": 25,
+      "max_age": 55,
+      "products": ["term_life"],
+      "exclusions": ["prior_decline", "material_aps"]
+    }
+  },
+  
+  "research": {
+    "hypothesis_testing_enabled": true,
+    "hypotheses": {
+      "H1_evidence_efficiency": {
+        "name": "Evidence Efficiency",
+        "description": "ACRI reduces unnecessary evidence without degrading risk selection"
+      },
+      "H2_stp_expansion": {
+        "name": "STP Expansion",
+        "description": "ACRI increases STP rate compared to traditional pathway"
+      },
+      "H3_targeted_evidence": {
+        "name": "Targeted Evidence",
+        "description": "Dynamic evidence selection reduces unnecessary lab/medical records"
+      },
+      "H4_underwriter_capacity": {
+        "name": "Underwriter Capacity",
+        "description": "STP expansion increases capacity for complex cases"
+      },
+      "H5_risk_preservation": {
+        "name": "Risk Preservation",
+        "description": "ACRI expands automation without degrading mortality selection"
+      }
+    }
+  }
+}
