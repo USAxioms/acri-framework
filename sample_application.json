@@ -1,0 +1,50 @@
+{
+  "application_id": "APP-20260919-001",
+  "applicant": {
+    "name": "John Smith",
+    "age": 35,
+    "gender": "M",
+    "occupation": "Software Engineer"
+  },
+  "underwriting": {
+    "product": "Term Life - 20 Year",
+    "face_amount": 250000,
+    "requested_coverage": 250000
+  },
+  "health": {
+    "current_health": "Generally good health",
+    "conditions": "Controlled hypertension (diagnosed age 32)",
+    "medications": "Lisinopril 10mg daily",
+    "medication_duration": "3 years",
+    "allergies": "None reported"
+  },
+  "lifestyle": {
+    "tobacco_use": "Never used tobacco",
+    "alcohol_use": "Occasional social use",
+    "substance_use": "None reported",
+    "exercise": "3-4 times per week, running and weight training"
+  },
+  "family_history": {
+    "mother": "Living, age 65, good health",
+    "father": "Living, age 68, hypertension controlled",
+    "siblings": "1 brother, living, healthy",
+    "early_deaths": "None in immediate family",
+    "significant_conditions": "Father has hypertension"
+  },
+  "occupational": {
+    "occupation": "Software Engineer",
+    "industry": "Technology",
+    "hazard_level": "Minimal",
+    "travel": "Occasional domestic travel"
+  },
+  "behavioral": {
+    "driving_history": "No violations or accidents",
+    "criminal_history": "No criminal record",
+    "violations": "None"
+  },
+  "financial": {
+    "annual_income": 150000,
+    "employment_status": "Employed, full-time",
+    "years_current_employment": 5
+  }
+}
